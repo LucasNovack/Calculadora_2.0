@@ -2,13 +2,13 @@ let resultPara = document.getElementById("result-value")
 let memo = document.getElementById("mem");
 
 
-function percent(){
+function percent() {
     let tempMemo = parseFloat(memo.innerHTML);
     let tempValue = parseFloat(resultPara.innerHTML);
     let realValue = parseFloat(tempMemo.toString().split(" ")[0]);
     let percValue = realValue * (tempValue / 100)
     resultPara.innerHTML = percValue
-    if(!tempMemo.toString().split(" ") > 3){
+    if (!tempMemo.toString().split(" ") > 3) {
         memo.innerHTML += ` ${percValue} =`
     }
 }
@@ -17,14 +17,14 @@ function percent(){
 function refreshResult(valor) {
 
 
-    if (resultPara.innerText.length < 16) {
+    if (resultPara.innerHTML.length < 16) {
 
-        if (resultPara.innerText[0] == 0) {
-            resultPara.innerText = valor
+        if (resultPara.innerHTML[0] == 0) {
+            resultPara.innerHTML = valor
         }
 
         else {
-            resultPara.innerText += valor
+            resultPara.innerHTML += valor
         }
 
     }
@@ -32,14 +32,14 @@ function refreshResult(valor) {
 }
 
 function hardClean() {
-    resultPara.innerText = 0
+    resultPara.innerHTML = 0
     memo.style.visibility = "hidden"
-    memo.innerText = 0
+    memo.innerHTML = 0
 }
 
 function backspace() {
 
-    let tempLength = +resultPara.innerText.length;
+    let tempLength = +resultPara.innerHTML.length;
 
     if (tempLength > 1) {
         resultPara.innerHTML = resultPara.innerHTML.slice(0, -1);
@@ -52,64 +52,64 @@ function backspace() {
 }
 
 function invert() {
-    resultPara.innerText = +(resultPara.innerText * -1)
+    resultPara.innerHTML = +(resultPara.innerHTML * -1)
 }
 
 function square() {
-    let tempValue = resultPara.innerText;
-    memo.innerText = `sqr(${tempValue}) `
+    let tempValue = resultPara.innerHTML;
+    memo.innerHTML = `sqr(${tempValue}) `
     memo.style.visibility = "unset"
-    resultPara.innerText = Math.pow(+(resultPara.innerText), 2)
+    resultPara.innerHTML = Math.pow(+(resultPara.innerHTML), 2)
 }
 
 function divideByOne() {
-    let tempValue = resultPara.innerText;
-    memo.innerText = `1/(${tempValue}) `
+    let tempValue = resultPara.innerHTML;
+    memo.innerHTML = `1/(${tempValue}) `
     memo.style.visibility = "unset"
-    resultPara.innerText = 1 / +(tempValue);
+    resultPara.innerHTML = 1 / +(tempValue);
 }
 
 function softClean() {
-    resultPara.innerText = 0
+    resultPara.innerHTML = 0
 }
 
 function plus() {
-    if (resultPara.innerText != 0) {
-        memo.innerHTML = resultPara.innerText += " +"
+    if (resultPara.innerHTML != 0) {
+        memo.innerHTML = resultPara.innerHTML += " +"
         memo.style.visibility = "unset"
-        resultPara.innerText = 0
+        resultPara.innerHTML = 0
     }
 }
 
 function minus() {
-    if (resultPara.innerText != 0) {
-        memo.innerHTML = resultPara.innerText += " -"
+    if (resultPara.innerHTML != 0) {
+        memo.innerHTML = resultPara.innerHTML += " -"
         memo.style.visibility = "unset"
-        resultPara.innerText = 0
+        resultPara.innerHTML = 0
     }
 }
 
 function divide() {
-    if (resultPara.innerText != 0) {
-        memo.innerHTML = resultPara.innerText += " ÷"
+    if (resultPara.innerHTML != 0) {
+        memo.innerHTML = resultPara.innerHTML += " ÷"
         memo.style.visibility = "unset"
-        resultPara.innerText = 0
+        resultPara.innerHTML = 0
     }
 }
 
 function multiply() {
-    if (resultPara.innerText != 0) {
-        memo.innerHTML = resultPara.innerText += " x"
+    if (resultPara.innerHTML != 0) {
+        memo.innerHTML = resultPara.innerHTML += " x"
         memo.style.visibility = "unset"
-        resultPara.innerText = 0
+        resultPara.innerHTML = 0
     }
 }
 
 function squareRoot() {
-    let tempValue = resultPara.innerText;
-    memo.innerText = `√(${tempValue}) `
+    let tempValue = resultPara.innerHTML;
+    memo.innerHTML = `√(${tempValue}) `
     memo.style.visibility = "unset"
-    resultPara.innerText = Math.sqrt(+resultPara.innerText)
+    resultPara.innerHTML = Math.sqrt(+resultPara.innerHTML)
 }
 
 function dot() {
