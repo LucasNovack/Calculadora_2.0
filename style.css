@@ -1,0 +1,109 @@
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url("https://wallpapercave.com/wp/wp5493583.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+button{
+    background-color: #ffffff;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    border: 0.8px solid rgb(209, 207, 207);
+    width: 5rem;
+    height: 3.5rem;
+}
+
+button:hover{
+    opacity: 75%;
+}
+
+
+
+.calc{
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.3rem;
+    background-color: #ececec;
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    max-width:35.5vh;;
+    max-height: 61vh;
+    border: 1px solid #000;
+    -webkit-box-shadow: 10px 14px 39px -19px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 14px 39px -19px rgba(0,0,0,0.75);
+    box-shadow: 10px 14px 39px -19px rgba(0,0,0,0.75);
+}
+
+
+.buttons-area{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 0.18rem;
+    row-gap: 0.18rem;
+}
+
+.out-range{
+    background-color: #f8f9fd;
+}
+
+
+#my-name{
+    margin: 0;
+}
+
+#mem{
+    font-weight: 200;
+    font-size: 1rem;
+    margin-top: 4vh;
+    text-align: end;
+    visibility: hidden;
+
+}
+
+#emoji{
+    font-size: 1.8rem;
+}
+
+#background{
+    width: 20vh;
+    height: 20vh;
+}
+
+#result-value{
+    text-align: end;
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 4.5vh;
+    font-weight: 500;
+    font-size-adjust:5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#equal{
+    color: #fff;
+    background-color: #0062c0;
+
+}

@@ -1,0 +1,61 @@
+'<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <div class="calc">
+
+            <p id="my-name"><span id="emoji">🖩</span> Lucas Novack</p>
+
+            <section class="result-area">
+                <p id="mem">Mostruário</p>
+                <h3 id="result-value">0</h3>
+            </section>
+
+            <section class="buttons-area">
+                <button class="out-range" onclick="percent()" id="percentage">%</button>
+                <button class="out-range" onclick="softClean()" id="clear">CE</button>
+                <button class="out-range" onclick="hardClean()" id="hardclear">C</button>
+                <button class="out-range" onclick="backspace()" id="backspace">⌫</button>
+                <button class="out-range" onclick="divideByOne()" id="1/x">1/x</button>
+                <button class="out-range" onclick="square()" id="square">x²</button>
+                <button class="out-range" onclick="squareRoot()" id="square-root">√</button>
+                <button class="out-range" onclick="divide()" id="divide">÷</button>
+                <button class="in-range" onclick="refreshResult(7)" id="seven">7</button>
+                <button class="in-range" onclick="refreshResult(8)" id="eigth">8</button>
+                <button class="in-range" onclick="refreshResult(9)" id="nine">9</button>
+                <button class="out-range" onclick="multiply()" id="multiply">X</button>
+                <button class="in-range" onclick="refreshResult(4)" id="four">4</button>
+                <button class="in-range" onclick="refreshResult(5)" id="five">5</button>
+                <button class="in-range" onclick="refreshResult(6)" id="six">6</button>
+                <button class="out-range" onclick="minus()" id="minus">-</button>
+                <button class="in-range" onclick="refreshResult(1)" id="one">1</button>
+                <button class="in-range" onclick="refreshResult(2)" id="two">2</button>
+                <button class="in-range" onclick="refreshResult(3)" id="three">3</button>
+                <button class="out-range" onclick="plus()" id="plus">+</button>
+                <button class="in-range" onclick="invert()" id="inverter">+/-</button>
+                <button class="in-range" onclick="refreshResult(0)" id="0">0</button>
+                <button class="in-range" onclick="dot()" id="dot">.</button>
+                <button class="out-range" onclick="equal()" id="equal">=</button>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+</body>
+<script src="index.js"></script>
+
+</html>'
